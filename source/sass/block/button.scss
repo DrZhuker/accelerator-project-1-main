@@ -1,0 +1,66 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Robotocondensed", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: unset;
+  border: 1px solid $bg-base;
+  min-width: 230px;
+  min-height: 66px;
+  color: $text-color-alt;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
+
+.button:not(:disabled):hover {
+  color: $text-color-other;
+  background-color: $button-color-base;
+}
+
+.button:not(:disabled):focus-visible {
+  background-color: $button-color-base;
+  color: $text-color-other;
+  opacity: 0.5;
+  outline: 1px solid $color-black;
+}
+
+.button:not(:disabled):active {
+  color: $text-color-base;
+  background-color: $button-color-base;
+}
+
+.button--secondary {
+  color: $text-color-base;
+  border: 1px solid $text-color-base;
+}
+
+.button--secondary:disabled {
+  opacity: 0.3;
+}
+
+.button--secondary:not(:disabled):hover {
+  color: $text-color-alt;
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+}
+
+.button--secondary:not(:disabled):focus-visible {
+  color: $text-color-alt;
+  background: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+  outline: 1px solid $color-black;
+}
+
+.button--secondary:not(:disabled):active {
+  color: $text-color-alt;
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  opacity: 0.7;
+}

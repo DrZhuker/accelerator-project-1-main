@@ -1,0 +1,34 @@
+// цвет текста
+$text-color-base: #102654;
+$text-color-alt: #ffffff;
+$text-color-other: #103aae;
+$text-colot-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+
+// цвет кнопок
+$button-color-base: #ffffff;
+$button-color-alt: #102654;
+$button-color-other: #1c3374;
+$button-color-gradient: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
+$button-color-tab: #d10a42;
+
+// цвет фона
+$bg-base: #ffffff;
+$bg-alt: #f8f9fc;
+$bg-banner: #ed0233;
+$bg-darked: #102654;
+$bg-gradient: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+$bg-footer: #030a1a;
+$bg-block-alt: #1c3374;
+
+// цвет иконок
+$icon-light: #ffffff;
+$icon-dark: #102654;
+$form-base: #ffffff;
+$form-err: #ff121f;
+
+// цвет
+$color-black: #000000;
+
+// break-points
+$tablet-width: 768px;
+$desktop-width: 1366px;
