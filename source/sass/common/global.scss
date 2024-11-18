@@ -17,3 +17,11 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
+.page-body {
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}

@@ -16,6 +16,7 @@
 
   @media (width >= $desktop-width) {
     padding: 30px 103px 120px;
+    grid-template-columns: 1fr 500px;
   }
 }
 
@@ -163,9 +164,8 @@
     display: flex;
   }
 
-  @media (width >= $desktop-width) {
-    padding: 30px 103px 120px;
-  }
+  // @media (width >= $desktop-width) {
+  // }
 }
 
 .hero__image {
