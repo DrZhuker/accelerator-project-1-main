@@ -93,8 +93,57 @@
       </div>
       </div>
     </section>
+
+    <section class="price" data-test="price">
+      <div class="price__container container">
+        <h1 class="price__title">Абонементы</h1>
+        <ul class="price__tabs-list">
+          <li class="price__tabs-item">
+            <input class="price__tabs-input price__tabs-input--onemonth visually-hidden" id="onemonth" type="radio" name="month" checked data-trainer="5000" data-day="1700" data-full-day="2700">
+            <label class="price__tabs-label" for="onemonth">1 месяц</label>
+          </li>
+          <li class="price__tabs-item">
+            <input class="price__tabs-input price__tabs-input--sixmonth visually-hidden" id="sixmonth" type="radio" name="month" data-trainer="30000" data-day="10200" data-full-day="16200">
+            <label class="price__tabs-label" for="sixmonth">6 месяцев</label>
+          </li>
+          <li class="price__tabs-item">
+            <input class="price__tabs-input price__tabs-input--twelvemonth visually-hidden" id="twelvemonth" type="radio" name="month" data-trainer="60000" data-day="20400" data-full-day="32400">
+            <label class="price__tabs-label" for="twelvemonth">12 месяцев</label>
+          </li>
+        </ul>
+        <ul class="price__card-list">
+          <li class="price__card-item card">
+            <h2 class="card__title">С тренером</h2>
+            <p class="card__text">12 занятий</p>
+            <p class="card__cost">
+              <span price-value="5000">5000</span>
+              <img class="card__svg" src="/__spritemap#sprite-icon-rub-view" alt="рублик" width="24" height="33">
+            </p>
+            <button class="card__button button--secondary" type="button">Купить абоненемент</button>
+          </li>
+          <li class="price__card-item card">
+            <h2 class="card__title">Дневной</h2>
+            <p class="card__text">с 8:00 до 17:00</p>
+            <p class="card__cost">
+              <span price-value="1700">1700</span>
+              <img class="card__svg" src="/__spritemap#sprite-icon-rub-view" alt="рублик" width="24" height="33">
+            </p>
+            <button class="card__button button--secondary" type="button">Купить абоненемент</button>
+          </li>
+          <li class="price__card-item card">
+            <h2 class="card__title">Полный день</h2>
+            <p class="card__text">с 8:00 до 22:00</p>
+            <p class="card__cost">
+              <span price-value="2700">2700</span>
+              <img class="card__svg" src="/__spritemap#sprite-icon-rub-view" alt="рублик" width="24" height="33">
+            </p>
+            <button class="card__button button--secondary" type="button">Купить абоненемент</button>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <footer class="footer" data-test="footer">
+  <footer class=" footer" data-test="footer">
     <div class="footer__container container">
       <div class="footer__logo logo">
         <picture>
@@ -186,6 +235,44 @@
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function updatePrices() {
+      // Находим активный input
+      const activeInput = document.querySelector('.price__tabs-input:checked');
+      if (!activeInput) return; // Если активный input не найден, ничего не делаем
+
+      // Получаем данные о ценах из атрибутов data
+      const trainerPrice = activeInput.dataset.trainer;
+      const dayPrice = activeInput.dataset.day;
+      const fullDayPrice = activeInput.dataset.fullDay;
+
+      // Находим все карточки
+      const cards = document.querySelectorAll('.price__card-item');
+
+      // Обновляем цены для каждой карточки
+      cards.forEach((card) => {
+        const title = card.querySelector('.card__title').textContent.trim();
+        const priceElement = card.querySelector('[price-value]');
+
+        if (title === 'С тренером') {
+          priceElement.textContent = parseInt(trainerPrice).toLocaleString(); // Обновляем цену "С тренером"
+        } else if (title === 'Дневной') {
+          priceElement.textContent = parseInt(dayPrice).toLocaleString(); // Обновляем цену "Дневной"
+        } else if (title === 'Полный день') {
+          priceElement.textContent = parseInt(fullDayPrice).toLocaleString(); // Обновляем цену "Полный день"
+        }
+      });
+    }
+
+    // Добавляем обработчики событий для радиокнопок
+    const inputs = document.querySelectorAll('.price__tabs-input');
+    inputs.forEach((input) => {
+      input.addEventListener('change', updatePrices); // Слушаем событие "change"
+    });
+
+    // Вызываем функцию один раз при загрузке страницы для инициализации цен
+    updatePrices();
+
   </script>
 </body>
 

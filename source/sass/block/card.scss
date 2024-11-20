@@ -1,0 +1,126 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-base;
+  min-width: 290px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px;
+
+  @media (width >= $tablet-width) {
+    min-width: 380px;
+    padding: 65px;
+  }
+
+  @media (width >= $desktop-width) {
+    min-width: 360px;
+  }
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 19px;
+
+  @media (width >= $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.card__text {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 18px;
+
+  @media (width >= $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.card__cost {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: $text-color-other;
+  padding-top: 48px;
+  margin-bottom: 18px;
+  position: relative;
+
+  @media (width >= $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+  }
+}
+
+.card__cost span {
+  z-index: 1;
+
+  &::after {
+    content: attr(price-value);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-price-card-cost-after;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    z-index: -1;
+
+    @media (width >= $tablet-width) {
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+}
+
+.card__svg {
+  z-index: 1;
+}
+
+.card__button {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  padding: 25px;
+  width: 100%;
+}

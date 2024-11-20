@@ -1,0 +1,202 @@
+.price {
+  display: flex;
+  background-color: $bg-alt;
+  justify-content: center;
+
+  @media (width >= $tablet-width) {
+    background-image: url("../../img/price/price-img-tablet@2x.png");
+    background-repeat: no-repeat;
+    background-size: 275px 328px;
+    background-position: right bottom;
+  }
+
+  @media (width >= $desktop-width) {
+    background-image: url("../../img/price/price-img-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-size: 321px 384px;
+    background-position: right bottom;
+  }
+}
+
+.price__container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 15px;
+  align-items: center;
+
+  @media (width >= $tablet-width) {
+    width: 380px;
+    padding: 60px 15px;
+  }
+
+  @media (width >= $desktop-width) {
+    width: 1160px;
+    padding: 100px 0;
+  }
+}
+
+.price__title {
+  margin: 0;
+  display: flex;
+  font-family: "AlumniSans", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 30px;
+
+  @media (width >= $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.price__tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 45px;
+    width: 310px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: $color-price-tab;
+  }
+}
+
+.price__tabs-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.price__tabs-item:hover .price__tabs-label {
+  opacity: 0.7;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-price-tab-hover;
+    z-index: 10;
+  }
+}
+
+.price__tabs-label {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  opacity: 0.5;
+  padding: 5px 0 10px;
+  cursor: pointer;
+  z-index: 1;
+
+  @media (width >= $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.price__tabs-input:checked + .price__tabs-label {
+  opacity: 1;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $button-color-tab;
+    z-index: 10;
+  }
+}
+
+.price__tabs-input:disabled + .price__tabs-label {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $color-price-tab-disabled;
+  }
+}
+
+.price__tabs-input:focus-visible + .price__tabs-label {
+  opacity: 1;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $text-color-base;
+  }
+}
+
+// .price__tabs-input {
+//   display: none;
+// }
+
+.price__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (width >= $tablet-width) {
+    gap: 40px;
+  }
+
+  @media (width >= $desktop-width) {
+    flex-direction: row;
+  }
+}
