@@ -71,7 +71,7 @@
             <source type="image/webp" width="320" height="280" srcset="img/about/main-img-mobile@1x.webp 1x, img/about/main-img-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" type="image/png" width="552" height="400" srcset="img/about/main-img-desktop@1x.jpg 1x, img/about/main-img-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" type="image/jpg" width="678" height="345" srcset="img/about/main-img-tablet@1x.jpg 1x, img/about/main-img-tablet@2x.jpg 2x">
-            <img class="about__image" src="img/about/main-img-mobile@1x.jpg" srcset="img/about/main-img-mobile@2x.jpg" width="320" height="280" alt="Банка корма с курицей">
+            <img class="about__image" src="img/about/main-img-mobile@1x.jpg" srcset="img/about/main-img-mobile@2x.jpg" width="320" height="280" alt="Тренажёрный зал">
           </picture>
         </div>
         <div class="about__video-wrapper">
@@ -141,6 +141,41 @@
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="games" data-test="games">
+      <div class="games__container container">
+        <div class="games__wrapper">
+          <h1 class="games__title">SUPER GAMES</h1>
+          <p class="games__description">Ежегодные соревнования по CrossFit</p>
+          <div class="games__datatime games__datatime--data">
+            <p class="games__datatime-description">Дата</p>
+            <time class="games__datatime-time" datetime="2019-03-07">
+              <span class="games__day">7</span>
+              <span class="games__mouth">Марта</span>
+              <span class="games__year">2019</span>
+            </time>
+          </div>
+          <div class="games__datatime games__datatime--time">
+            <p class="games__datatime-description">Время</p>
+            <time class="games__datatime-time" datetime="2019-03-07T12:00+006">
+              <span class="games__time">12:00</span>
+            </time>
+          </div>
+          <a class="games__link button" href="#">Заполнить заявку</a>
+        </div>
+        <div class="games__image-wrapper container">
+          <picture>
+            <source media="(min-width: 1366px)" type="image/webp" width="660" height="500" srcset="img/games/games-img-desktop@1x.webp@1x.webp 1x, img/games/games-img-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" width="378" height="348" srcset="img/games/games-img-tablet@1x.webp 1x, img/games/games-img-tablet@2x.webp 2x">
+            <source type="image/webp" width="290" height="290" srcset="img/games/games-img-mobile@1x.webp 1x, img/games/games-img-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" type="image/png" width="660" height="500" srcset="img/games/games-img-desktop@1x.jpg 1x, img/games/games-img-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" type="image/jpg" width="378" height="348" srcset="img/games/games-img-tablet@1x.jpg 1x, img/games/games-img-tab let@2x.jpg 2x">
+            <img class="games__image" src="img/games/games-img-mobile@1x.jpg" srcset="img/games/games-img-mobile@2x.jpg" width="290" height="290" alt="Тренажёрный зал">
+          </picture>
+        </div>
+      </div>
+
     </section>
   </main>
   <footer class=" footer" data-test="footer">
@@ -255,11 +290,11 @@
         const priceElement = card.querySelector('[price-value]');
 
         if (title === 'С тренером') {
-          priceElement.textContent = parseInt(trainerPrice).toLocaleString(); // Обновляем цену "С тренером"
+          priceElement.textContent = parseInt(trainerPrice).toLocaleString(); priceElement.setAttribute('price-value', trainerPrice); // Обновляем цену "С тренером"
         } else if (title === 'Дневной') {
-          priceElement.textContent = parseInt(dayPrice).toLocaleString(); // Обновляем цену "Дневной"
+          priceElement.textContent = parseInt(dayPrice).toLocaleString(); priceElement.setAttribute('price-value', dayPrice); // Обновляем цену "Дневной"
         } else if (title === 'Полный день') {
-          priceElement.textContent = parseInt(fullDayPrice).toLocaleString(); // Обновляем цену "Полный день"
+          priceElement.textContent = parseInt(fullDayPrice).toLocaleString(); priceElement.setAttribute('price-value', fullDayPrice);// Обновляем цену "Полный день"
         }
       });
     }
