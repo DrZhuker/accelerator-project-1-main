@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px 40px;
+  border: 7px solid $bg-base;
 
   @media (width >= $tablet-width) {
     min-width: 380px;
@@ -123,4 +124,11 @@
   text-transform: uppercase;
   padding: 25px;
   width: 100%;
+}
+
+.card:has(.card__button:hover) {
+  border: 7px solid transparent; /* Устанавливаем прозрачную рамку */
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1; /* Используем весь градиент для границы */
+  border-radius: 5px;
 }
