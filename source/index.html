@@ -223,7 +223,7 @@
       </div>
     </section>
 
-    <section class="offers">
+    <section class="offers" data-test="offers">
       <h1 class="offers__title">Акции</h1>
       <ul class="offers__card-list">
         <li class="offers__card-item offers__card-item--hero">
@@ -259,6 +259,39 @@
         </li>
       </ul>
 
+    </section>
+
+    <!-- тут будут вопросы и ответы -->
+
+    <!-- тут будут отзывы -->
+
+    <section class="form" data-test="form">
+      <div class="form__wrapper-form">
+        <div class="form__inner container">
+          <h1 class="form__title">Бесплатное занятие</h1>
+          <form class="form__form" action="#">
+            <label class="form__label form__label-name">
+              <span class="visually-hidden">Ваше имя</span>
+              <input class="form__input form__input-name" placeholder="Имя" type="text" name="name">
+              <span class="form__text-error form__text-error--name">Введите имя не менее двух символов</span>
+            </label>
+            <label class="form__label form__label-phone">
+              <span class="visually-hidden">Ваш телефон</span>
+              <input class="form__input form__input-phone" placeholder="Телефон" type="tel" name="phone">
+              <span class="form__text-error form__text-error--phone">Невозможный телефон</span>
+            </label>
+          </form>
+          <button class="form__button button" type="button">Отправить</button>
+        </div>
+      </div>
+      <div class="form__wrapper-contact container">
+        <h2 class="form__title form__title--contact">Контакты</h2>
+        <address class="form__text-contact form__text-contact--address">Адрес:<span>г. Омск, ул. 60 лет Октября, 7</span></address>
+        <p class="form__text-contact form__text-contact--work">График работы: <span>Пн-Вс: с 8:00 до 22:00</span> </p>
+        <div class="form__contact-divider"></div>
+        <p class="form__text-contact form__text-contact--tel">Телефон: <a href="tel:88005555555">8 800 555-55-55</a></p>
+        <p class="form__text-contact form__text-contact--link">Email: <a href="mailto:oмск@supergym.ru">oмск@supergym.ru</a></p>
+      </div>
     </section>
 
   </main>
@@ -392,6 +425,43 @@
     // Вызываем функцию один раз при загрузке страницы для инициализации цен
     updatePrices();
 
+
+
+    // валидация телефона
+
+    const phoneInput = document.querySelector('.form__input-phone');
+    const errorText = document.querySelector('.form__text-error--phone');
+
+    phoneInput.addEventListener('input', () => {
+      const phoneValue = phoneInput.value;
+      const phoneRegex = /^[0-9+\-() ]+$/; // Разрешенные символы
+
+      if (!phoneRegex.test(phoneValue)) {
+        phoneInput.classList.add('invalid');
+        errorText.style.display = 'block';
+      } else {
+        phoneInput.classList.remove('invalid');
+        errorText.style.display = 'none';
+      }
+    });
+
+
+    // проверка имени
+    const nameInput = document.querySelector('.form__input-name');
+    const nameErrorText = document.querySelector('.form__text-error--name');
+
+    nameInput.addEventListener('input', () => {
+      const nameValue = nameInput.value.trim();
+      const nameRegex = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
+
+      if (nameValue.length < 2 || !nameRegex.test(nameValue)) {
+        nameInput.classList.add('invalid');
+        nameErrorText.style.display = 'block';
+      } else {
+        nameInput.classList.remove('invalid');
+        nameErrorText.style.display = 'none';
+      }
+    });
   </script>
 </body>
 
