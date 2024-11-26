@@ -116,7 +116,7 @@
   @media (width >= $tablet-width) {
     padding: 60px 0;
     width: 440px;
-    grid-template-columns: repeat(1fr 1px 1fr);
+    grid-template-columns: repeat(189px 30px 190px);
     row-gap: 15px;
     position: relative;
   }
@@ -135,7 +135,7 @@
     &::after {
       position: absolute;
       content: "";
-      width: 1px;
+      width: 10px;
       background-color: $color-divider;
       top: 0;
       bottom: 0;
@@ -147,24 +147,28 @@
 .form__text-contact--address {
   @media (width >= $tablet-width) {
     grid-column: 1;
+    grid-row: 2 / 3;
   }
 }
 
 .form__text-contact--work {
   @media (width >= $tablet-width) {
     grid-column: 1;
+    grid-row: 3 / 4;
   }
 }
 
 .form__text-contact--tel {
   @media (width >= $tablet-width) {
     grid-column: 3;
+    grid-row: 2 / 3;
   }
 }
 
 .form__text-contact--link {
   @media (width >= $tablet-width) {
     grid-column: 3;
+    grid-row: 3 / 4;
   }
 }
 
