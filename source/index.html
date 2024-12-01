@@ -60,16 +60,16 @@
           <h1 class="about__title">Тренажёрный зал</h1>
           <h2 class="about__text">Просторный зал площадью 900 кв/м</h2>
           <div class="about__description-wrapper">
-            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления т ела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
             <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
           </div>
         </div>
         <div class="about__image-wrapper">
           <picture>
-            <source media="(min-width: 1366px)" type="image/webp" width="552" height="400" srcset="img/about/main-img-desktop@1x.webp 1x, img/about/main-img-desktop@2x.webp 2x">
+            <source media="(min-width: 1366px)" type="image/webp" width="660" height="400" srcset="img/about/main-img-desktop@1x.webp 1x, img/about/main-img-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" width="678" height="345" srcset="img/about/main-img-tablet@1x.webp 1x, img/about/main-img-tablet@2x.webp 2x">
             <source type="image/webp" width="320" height="280" srcset="img/about/main-img-mobile@1x.webp 1x, img/about/main-img-mobile@2x.webp 2x">
-            <source media="(min-width: 1366px)" type="image/png" width="552" height="400" srcset="img/about/main-img-desktop@1x.jpg 1x, img/about/main-img-desktop@2x.jpg 2x">
+            <source media="(min-width: 1366px)" type="image/png" width="660" height="400" srcset="img/about/main-img-desktop@1x.jpg 1x, img/about/main-img-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" type="image/jpg" width="678" height="345" srcset="img/about/main-img-tablet@1x.jpg 1x, img/about/main-img-tablet@2x.jpg 2x">
             <img class="about__image" src="img/about/main-img-mobile@1x.jpg" srcset="img/about/main-img-mobile@2x.jpg" width="320" height="280" alt="Тренажёрный зал">
           </picture>
@@ -166,7 +166,7 @@
         </div>
         <div class="games__image-wrapper">
           <picture>
-            <source media="(min-width: 1366px)" type="image/webp" width="660" height="500" srcset="img/games/games-img-desktop@1x.webp@1x.webp 1x, img/games/games-img-desktop@2x.webp 2x">
+            <source media="(min-width: 1366px)" type="image/webp" width="660" height="500" srcset="img/games/games-img-desktop@1x.webp 1x, img/games/games-img-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" width="378" height="348" srcset="img/games/games-img-tablet@1x.webp 1x, img/games/games-img-tablet@2x.webp 2x">
             <source type="image/webp" width="290" height="290" srcset="img/games/games-img-mobile@1x.webp 1x, img/games/games-img-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" type="image/png" width="660" height="500" srcset="img/games/games-img-desktop@1x.jpg 1x, img/games/games-img-desktop@2x.jpg 2x">
@@ -178,9 +178,95 @@
 
     </section>
 
-    <!-- тут будет свайпер жури -->
+    <section class="juri" data-test="juri">
+      <h1 class="juri__title">Жюри</h1>
+      <div class="juri__swiper swiper">
+        <!-- Additional required wrapper -->
+        <ul class="juri__list-swiper swiper-wrapper">
+          <!-- Slides -->
+          <li class="juri__item-swiper card-juri swiper-slide" tabindex="0">
+            <div class="card-juri__image-wrapper">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/jury/foto-annapavlova@1x.webp 1x, img/jury/foto-annapavlova@2x.webp 2x">
+                <img class="card-juri__image" src="img/jury/foto-annapavlova@1x.jpg" srcset="img/jury/foto-annapavlova@2x.jpg" width="260" height="300" alt="Тренажёрный зал">
+              </picture>
+            </div>
+            <div class="card-juri__description-wrapper">
+              <h2 class="card-juri__name-juri">Анна Павлова</h2>
+              <span class="card-juri__prof-juri">LightStranch</span>
+              <ul class="card-juri__juri-desc-list">
+                <li class="card-juri__juri-desc-item">Победитель</li>
+                <li class="card-juri__juri-desc-item">Опыт на годы</li>
+                <li class="card-juri__juri-desc-item">Научит всему</li>
+              </ul>
+            </div>
+          </li>
+          <li class="juri__item-swiper card-juri swiper-slide" tabindex="0">
+            <div class="card-juri__image-wrapper">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/jury/foto-alekseylavrov@1x.webp 1x, img/jury/foto-alekseylavrov@2x.webp 2x">
+                <img class="card-juri__image" src="img/jury/foto-alekseylavrov@1x.jpg" srcset="img/jury/foto-alekseylavrov@2x.jpg" width="260" height="300" alt="Тренажёрный зал">
+              </picture>
+            </div>
+            <div class="card-juri__description-wrapper">
+              <h2 class="card-juri__name-juri">Алексей Лавров</h2>
+              <span class="card-juri__prof-juri">CrossFit</span>
+              <ul class="card-juri__juri-desc-list">
+                <li class="card-juri__juri-desc-item">Победитель</li>
+                <li class="card-juri__juri-desc-item">Опыт на годы</li>
+                <li class="card-juri__juri-desc-item">Научит всему</li>
+              </ul>
+            </div>
+          </li>
+          <li class="juri__item-swiper card-juri swiper-slide" tabindex="0">
+            <div class="card-juri__image-wrapper">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/jury/foto-aleksandrpashkov@1x.webp 1x, img/jury/foto-aleksandrpashkov@2x.webp 2x">
+                <img class="card-juri__image" src="img/jury/foto-aleksandrpashkov@1x.jpg" srcset="img/jury/foto-aleksandrpashkov@2x.jpg" width="260" height="300" alt="Тренажёрный зал">
+              </picture>
+            </div>
+            <div class="card-juri__description-wrapper">
+              <h2 class="card-juri__name-juri">Александр Пашков</h2>
+              <span class="card-juri__prof-juri">CrossFit</span>
+              <ul class="card-juri__juri-desc-list">
+                <li class="card-juri__juri-desc-item">Победитель</li>
+                <li class="card-juri__juri-desc-item">Опыт на годы</li>
+                <li class="card-juri__juri-desc-item">Научит всему</li>
+              </ul>
+            </div>
+          </li>
+          <li class="juri__item-swiper card-juri swiper-slide" tabindex="0">
+            <div class="card-juri__image-wrapper">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/jury/foto-mariaketova@1x.webp 1x, img/jury/foto-mariaketova@2x.webp 2x">
+                <img class="card-juri__image" src="img/jury/foto-mariaketova@1x.jpg" srcset="img/jury/foto-mariaketova@2x.jpg" width="260" height="300" alt="Тренажёрный зал">
+              </picture>
+            </div>
+            <div class="card-juri__description-wrapper">
+              <h2 class="card-juri__name-juri">Мария Кетова</h2>
+              <span class="card-juri__prof-juri">LightStranch</span>
+              <ul class="card-juri__juri-desc-list">
+                <li class="card-juri__juri-desc-item">Победитель</li>
+                <li class="card-juri__juri-desc-item">Опыт на годы</li>
+                <li class="card-juri__juri-desc-item">Научит всему</li>
+              </ul>
+            </div>
+          </li>
 
-    <section class="features">
+        </ul>
+        <!-- If we need navigation buttons -->
+        <button class="juri__button juri__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Назад</span>
+          <div class="juri__button-arrow"></div>
+        </button>
+        <button class="juri__button juri__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Вперед</span>
+          <div class="juri__button-arrow"></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="features" data-test="features">
       <div class="features__container container">
         <h1 class="features__title">Наши преимущества</h1>
         <ul class="features__list">
@@ -209,7 +295,7 @@
             <div>
               <h2>Комфорт</h2>
               <p><span>350</span>мест</p>
-              <span>Современные тренажёры на все группы мышц</span>
+              <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
             </div>
           </li>
           <li class="features__item">
@@ -261,9 +347,166 @@
 
     </section>
 
-    <!-- тут будут вопросы и ответы -->
+    <section class="faq" data-test="faq">
+      <div class="faq__wrapper">
+        <h1 class="faq__title">Вопросы и ответы</h1>
+        <form class="faq__form" action="#">
+          <fieldset class="faq__fieidset">
+            <legend class="visually-hidden">Выбор ответов</legend>
+            <ul class="faq__radio-list">
+              <li class="faq__radio-item">
+                <label class="faq__label">
+                  <span class="faq__label-text button--secondary" tabindex="0">Центр</span>
+                  <input class="faq__input" type="radio" name="accordeon" id="center" checked>
+                </label>
+              </li>
+              <li class="faq__radio-item">
+                <label class="faq__label">
+                  <span class="faq__label-text button--secondary" tabindex="0">Абонемент</span>
+                  <input class="faq__input" type="radio" name="accordeon" id="abonement">
+                </label>
+              </li>
+              <li class="faq__radio-item">
+                <label class="faq__label">
+                  <span class="faq__label-text button--secondary" tabindex="0">Услуги</span>
+                  <input class="faq__input" type="radio" name="accordeon" id="servises">
+                </label>
+              </li>
+              <li class="faq__radio-item">
+                <label class="faq__label">
+                  <span class="faq__label-text button--secondary" tabindex="0">Правила</span>
+                  <input class="faq__input" type="radio" name="accordeon" id="rules">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <ul class="faq__list faq__list--center">
+            <li class="faq__list-item faq__list-item--active">
+              <button class="faq__list-button" type="button" tabindex="-1">Как стать членом фитнес-центра?
+                <div class="faq__list-button-wrapper" tabindex="0"></div>
+              </button>
+              <p class="faq__list-description">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Где можно посмотреть расписание?
+                <div class="faq__list-button-wrapper" tabindex="0"></div>
+              </button>
+              <p class="faq__list-description">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Есть кулеры в центре? Предоставляются полотенца?
+                <div class="faq__list-button-wrapper" tabindex="0"></div>
+              </button>
+              <p class="faq__list-description">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Сколько тренеров работает в клубе и какова их квалификация?
+                <div class="faq__list-button-wrapper" tabindex="0"></div>
+              </button>
+              <p class="faq__list-description">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+            </li>
+          </ul>
+          <ul class="faq__list faq__list--abonement">
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Занятия с тренером входят в абонемент?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Можно ли заморозить абонемент?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Есть ли лимит по посещениям тренажерного зала и групповых занятий?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Что такое семейный доступ и доступ для друзей?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+            </li>
+          </ul>
+          <ul class="faq__list faq__list--servises">
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Предлагает ли клуб услуги по консультированию по вопросам питания?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Проводятся ли в клубе какие-либо мероприятия или соревнования?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Можно ли приобрести в центре спортивное питание?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Есть ли в центре детская комната?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+            </li>
+          </ul>
+          <ul class="faq__list faq__list--rules">
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Есть в фитнес-центре дресс-код?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Можно ли приводить с собой детей на тренировки?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Какие дополнительные правила посещения центра?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+            </li>
+            <li class="faq__list-item">
+              <button class="faq__list-button" type="button" tabindex="-1">Нужна ли медицинская справка для посещения залов и бассейна?<div class="faq__list-button-wrapper" tabindex="0"></div></button>
+              <p class="faq__list-description">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
 
-    <!-- тут будут отзывы -->
+    <section class="reviews" data-test="reviews">
+      <h1 class="revievs__title">Отзывы</h1>
+      <div class="reviews__wrapper">
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__image-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" type="image/webp" width="80" height="80" srcset="img/reviews/avatar-tablet@1x.webp 1x, img/reviews/avatar-tablet@2x.webp 2x">
+                <source type="image/webp" width="68" height="68" srcset="img/reviews/avatar-mobile@1x.webp 1x, img/reviews/avatar-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/png" width="80" height="80" srcset="img/reviews/avatar-tablet@1x.png 1x, img/reviews/avatar-tablet@2x.png 2x">
+                <img class="reviews__image" src="img/reviews/avatar-mobile@1x.png" srcset="img/reviews/avatar-mobile@2x.png" width="68" height="68" alt="Аватар">
+              </picture>
+            </div>
+            <div class="reviews__item-inner">
+              <h2 class="reviews__autor-name">Анна Орлова</h2>
+              <p class="reviews__text">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__image-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" type="image/webp" width="80" height="80" srcset="img/reviews/avatar-tablet@1x.webp 1x, img/reviews/avatar-tablet@2x.webp 2x">
+                <source type="image/webp" width="68" height="68" srcset="img/reviews/avatar-mobile@1x.webp 1x, img/reviews/avatar-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/png" width="80" height="80" srcset="img/reviews/avatar-tablet@1x.png 1x, img/reviews/avatar-tablet@2x.png 2x">
+                <img class="reviews__image" src="img/reviews/avatar-mobile@1x.png" srcset="img/reviews/avatar-mobile@2x.png" width="68" height="68" alt="Аватар">
+              </picture>
+            </div>
+            <div class="reviews__item-inner">
+              <h2 class="reviews__autor-name">Анна Орлова</h2>
+              <p class="reviews__text">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+        </ul>
+        <button class="reviews__button reviews__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Назад</span>
+          <div class="reviews__button-arrow"></div>
+        </button>
+        <button class="reviews__button reviews__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Вперед</span>
+          <div class="reviews__button-arrow"></div>
+        </button>
+      </div>
+    </section>
 
     <section class="form" data-test="form">
       <div class="form__wrapper-form">
@@ -462,6 +705,46 @@
         nameErrorText.style.display = 'none';
       }
     });
+
+    // Аккордеон выбор списка
+    document.addEventListener("DOMContentLoaded", () => {
+      const radioInputs = document.querySelectorAll(".faq__input");
+      const faqLists = document.querySelectorAll(".faq__list");
+
+      function updateVisibleList() {
+        // Удаляем класс активности у всех списков
+        faqLists.forEach((list) => list.classList.remove("faq__list--active"));
+
+        // Добавляем класс активности только к выбранному списку
+        const selectedInput = document.querySelector(".faq__input:checked");
+        if (selectedInput) {
+          const listToShow = document.querySelector(`.faq__list--${selectedInput.id}`);
+          if (listToShow) {
+            listToShow.classList.add("faq__list--active");
+          }
+        }
+      }
+
+      // Обновляем видимость списка при загрузке и изменении радио
+      updateVisibleList();
+      radioInputs.forEach((input) =>
+        input.addEventListener("change", updateVisibleList)
+      );
+    });
+
+    // открытие выпадающего аккордеона
+    document.addEventListener("DOMContentLoaded", () => {
+      const faqItems = document.querySelectorAll(".faq__list-item");
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".faq__list-button");
+
+        button.addEventListener("click", () => {
+          item.classList.toggle("faq__list-item--active");
+        });
+      });
+    });
+
   </script>
 </body>
 

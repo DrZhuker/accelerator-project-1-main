@@ -6,14 +6,14 @@
   @media (width >= $tablet-width) {
     background-image: url("../../img/price/price-img-tablet@2x.png");
     background-repeat: no-repeat;
-    background-size: 275px 328px;
+    background-size: 329px 396px;
     background-position: right bottom;
   }
 
   @media (width >= $desktop-width) {
     background-image: url("../../img/price/price-img-desktop@2x.png");
     background-repeat: no-repeat;
-    background-size: 321px 384px;
+    background-size: 298px 456px;
     background-position: right bottom;
   }
 }
@@ -27,11 +27,13 @@
   @media (width >= $tablet-width) {
     width: 380px;
     padding: 60px 15px;
+    padding-bottom: 55px;
   }
 
   @media (width >= $desktop-width) {
     width: 1160px;
     padding: 100px 0;
+    padding-bottom: 95px;
   }
 }
 
@@ -45,16 +47,18 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (width >= $tablet-width) {
     font-size: 42px;
     line-height: 42px;
+    margin-bottom: 31px;
   }
 
   @media (width >= $desktop-width) {
     font-size: 54px;
     line-height: 54px;
+    margin-bottom: 17px;
   }
 }
 
@@ -66,11 +70,11 @@
   padding: 0;
   list-style: none;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   position: relative;
 
   @media (width >= $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 43px;
     width: 310px;
   }
 
@@ -79,8 +83,13 @@
     content: "";
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: 3px;
     background-color: $color-price-tab;
+  }
+
+  @media (width >= $desktop-width) {
+    width: 350px;
+    margin-bottom: 38px;
   }
 }
 
@@ -99,7 +108,7 @@
     content: "";
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: 3px;
     left: 0;
     background-color: $color-price-tab-hover;
     z-index: 10;
@@ -139,7 +148,7 @@
     content: "";
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: 3px;
     left: 0;
     background-color: $button-color-tab;
     z-index: 10;
@@ -193,10 +202,11 @@
   list-style: none;
 
   @media (width >= $tablet-width) {
-    gap: 40px;
+    gap: 35px;
   }
 
   @media (width >= $desktop-width) {
+    gap: 26px;
     flex-direction: row;
   }
 }

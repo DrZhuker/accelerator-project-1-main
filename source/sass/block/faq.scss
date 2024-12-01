@@ -1,0 +1,334 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bg-alt;
+}
+
+.faq__wrapper {
+  width: 320px;
+  padding: 70px 15px;
+
+  @media (width >= $tablet-width) {
+    width: 768px;
+    padding: 60px 45px;
+  }
+
+  @media (width >= $desktop-width) {
+    width: 1368px;
+    padding: 100px 103px;
+  }
+}
+
+
+.faq__title {
+  font-family: "AlumniSans", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 0;
+  margin-bottom: 35px;
+
+  @media (width >= $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 45px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 50px;
+  }
+}
+
+.faq__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= $desktop-width) {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+  }
+}
+
+.faq__fieidset {
+  display: flex;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 45px;
+  }
+}
+
+.faq__radio-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (width >= $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.faq__radio-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.faq__input {
+  display: none;
+}
+
+
+.faq__label-text {
+  display: flex;
+  width: 140px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: unset;
+  border: 1px solid $color-accordeon-border;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+
+  @media (width >= $tablet-width) {
+    width: 162px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (width >= $desktop-width) {
+    width: 260px;
+    height: 54px;
+  }
+}
+
+.faq__radio-item:has(.faq__input:checked) .faq__label-text {
+  color: $text-color-alt;
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+}
+
+.faq__list {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq__list-item {
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid $color-accordeon-divider;
+  overflow: hidden;
+  transition: gap 0.3s ease;
+
+  @media (width >= $tablet-width) {
+    padding: 23px 0;
+  }
+}
+
+.faq__list-item:last-child {
+  border-bottom: 1px solid $color-accordeon-divider;
+}
+
+
+.faq__list-button {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  align-self: flex-start;
+  text-align: left;
+  padding: 0;
+  padding-right: 60px;
+  color: $text-color-base;
+
+  @media (width >= $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+    height: 40px;
+  }
+}
+
+.faq__list-button-wrapper {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid $bg-darked;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-darked;
+    width: 30px;
+    height: 30px;
+    mask-image: url("../../__spritemap#sprite-icon-plus-view");
+    mask-size: 14px 14px;
+    mask-repeat: no-repeat;
+    mask-position: left 7px top 7px;
+  }
+
+
+  @media (width >= $tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      mask-size: 20px 20px;
+      mask-repeat: no-repeat;
+      mask-position: left 9px top 9px;
+    }
+  }
+}
+
+.faq__list-button-wrapper:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.faq__list-button-wrapper:hover {
+  background-color: $bg-darked;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-base;
+    width: 30px;
+    height: 30px;
+    mask-image: url("../../__spritemap#sprite-icon-plus-view");
+    mask-size: 14px 14px;
+    mask-repeat: no-repeat;
+    mask-position: left 7px top 7px;
+  }
+
+  @media (width >= $tablet-width) {
+    &::before {
+      mask-size: 20px 20px;
+      mask-position: left 9px top 9px;
+    }
+  }
+}
+
+.faq__list-button-wrapper:focus {
+  background-color: $color-accordeon-divider;
+  outline: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-base;
+    width: 30px;
+    height: 30px;
+    mask-image: url("../../__spritemap#sprite-icon-plus-view");
+    mask-size: 14px 14px;
+    mask-repeat: no-repeat;
+    mask-position: left 7px top 7px;
+  }
+
+  @media (width >= $tablet-width) {
+    &::before {
+      mask-size: 20px 20px;
+      mask-position: left 9px top 9px;
+    }
+  }
+}
+
+.faq__list-item--active .faq__list-button-wrapper {
+  background-color: $bg-darked;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-base;
+    width: 30px;
+    height: 30px;
+    mask-image: url("../../__spritemap#sprite-icon-minus-view");
+    mask-size: 14px 14px;
+    mask-repeat: no-repeat;
+    mask-position: left 7px top 7px;
+  }
+
+  @media (width >= $tablet-width) {
+    &::before {
+      mask-size: 20px 20px;
+      mask-position: left 9px top 9px;
+    }
+  }
+}
+
+.faq__list-description {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq__list-item--active {
+  gap: 20px;
+}
+
+.faq__list-item--active .faq__list-description {
+  max-height: 200px; /* Увеличь значение для длинных текстов */
+  opacity: 1;
+
+  @media (width >= $desktop-width) {
+    padding-right: 220px;
+  }
+}
+
+
+// .faq__list--center {
+//   display: none;
+// }
+
+// .faq__list--abonement {
+//   display: none;
+// }
+
+// .faq__list--servises {
+//   display: none;
+// }
+
+// .faq__list--rules {
+//   display: none;
+// }
+
+.faq__list--active {
+  display: flex; /* Показываем только активный список */
+}

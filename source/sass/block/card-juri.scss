@@ -1,0 +1,77 @@
+.card-juri {
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-juri__image {
+  display: flex;
+}
+
+.card-juri__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  color: $text-color-alt;
+  width: 260px;
+  height: 360px;
+  top: 253px;
+}
+
+.card-juri__name-juri {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.card-juri__prof-juri {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: $color-juri-hover;
+  margin-bottom: 33px;
+}
+
+.card-juri__juri-desc-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-juri__juri-desc-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+.card-juri:hover .card-juri__description-wrapper,
+.card-juri:focus .card-juri__description-wrapper {
+  top: 0;
+  background-color: $bg-darked;
+  opacity: 0.89;
+}
+
+.card-juri:hover .card-juri__name-juri,
+.card-juri:focus .card-juri__name-juri {
+  margin-top: 46px;
+}
+
+.card-juri:hover .card-juri__prof-juri,
+.card-juri:focus .card-juri__prof-juri {
+  opacity: 1;
+}
+

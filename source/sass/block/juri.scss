@@ -1,0 +1,166 @@
+.juri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+
+  @media (width >= $tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    width: 678px;
+    margin: 0 auto;
+  }
+
+  @media (width >= $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 1160px;
+  }
+}
+
+.juri__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "AlumniSans", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @media (width >= $tablet-width) {
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 46px;
+  }
+}
+
+.juri__swiper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.juri__list-swiper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+  gap: 40px;
+}
+
+.juri__list-swiper .card-juri:nth-child(1) {
+  display: flex;
+}
+
+.juri__list-swiper .card-juri:nth-child(2) {
+  @media (width >= $tablet-width) {
+    display: flex;
+  }
+}
+
+.juri__list-swiper .card-juri:nth-child(3),
+.juri__list-swiper .card-juri:nth-child(4) {
+  @media (width >= $desktop-width) {
+    display: flex;
+  }
+}
+
+.juri__button {
+  display: none;
+  position: absolute;
+  width: 59px;
+  height: 300px;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+
+  @media (width >= $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.juri__button--prev {
+  left: 0;
+
+  @media (width >= $desktop-width) {
+    left: -50px;
+  }
+}
+
+.juri__button--next {
+  right: 0;
+
+  @media (width >= $desktop-width) {
+    right: -50px;
+  }
+}
+
+.juri__button-arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $bg-darked;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.juri__button--prev .juri__button-arrow {
+  transform: scale(-1, 1);
+  left: -18px;
+
+  &::before {
+    mask-image: url("../../__spritemap#sprite-icon-button-arrow-view");
+    mask-size: 16px 32px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+}
+
+.juri__button--next .juri__button-arrow {
+  right: -20px;
+
+  &::before {
+    mask-image: url("../../__spritemap#sprite-icon-button-arrow-view");
+    mask-size: 16px 32px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+}
+
+.juri__button:not(:disabled):hover .juri__button-arrow {
+  outline: 1px solid $bg-darked;
+}
+
+.juri__button:not(:disabled):focus .juri__button-arrow {
+  outline: 1px solid $bg-darked;
+  background-color: $color-price-card-cost-after;
+}
+
+.juri__button:not(:disabled):active .juri__button-arrow {
+  outline: 1px solid $bg-darked;
+  background-color: $bg-darked;
+
+  &::before {
+    background-color: $bg-base;
+  }
+}
+
+.juri__button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

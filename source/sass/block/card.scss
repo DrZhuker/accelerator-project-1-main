@@ -5,12 +5,13 @@
   min-width: 290px;
   justify-content: center;
   align-items: center;
-  padding: 50px 40px;
+  padding: 44px 40px;
   border: 7px solid $bg-base;
 
   @media (width >= $tablet-width) {
     min-width: 380px;
     padding: 65px;
+    padding-top: 58px;
   }
 
   @media (width >= $desktop-width) {
@@ -33,11 +34,13 @@
   @media (width >= $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+    margin-bottom: 22px;
   }
 
   @media (width >= $desktop-width) {
     font-size: 26px;
     line-height: 26px;
+    margin-bottom: 17px;
   }
 }
 
@@ -74,18 +77,40 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: $text-color-other;
-  padding-top: 48px;
-  margin-bottom: 18px;
+  padding-top: 45px;
+  margin-bottom: 20px;
   position: relative;
 
   @media (width >= $tablet-width) {
+    padding-top: 64px;
     font-size: 60px;
     line-height: 90px;
+    margin-bottom: 22px;
+  }
+
+  @media (width >= $desktop-width) {
+    padding-top: 59px;
+    margin-bottom: 18px;
   }
 }
 
 .card__cost span {
   z-index: 1;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  letter-spacing: -2.1px;
+
+  @media (width >= $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+    letter-spacing: 0;
+  }
+
 
   &::after {
     content: attr(price-value);
@@ -123,7 +148,16 @@
   text-decoration-skip-ink: none;
   text-transform: uppercase;
   padding: 25px;
-  width: 100%;
+  width: 206px;
+  letter-spacing: -0.7px;
+
+  @media (width >= $tablet-width) {
+    width: 250px;
+  }
+
+  @media (width >= $desktop-width) {
+    width: 230px;
+  }
 }
 
 .card:has(.card__button:hover) {
